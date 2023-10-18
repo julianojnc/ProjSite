@@ -109,6 +109,10 @@ header{
 
 }
 
+section{
+    padding: 150px 100px 100px;
+}
+
 /* Diminuir MenuBar */
 
 @media (max-width: 1280px){
