@@ -8,7 +8,7 @@ menu.onclick = () => {
 };
 
 /* Esconder NavBar */
-const lastScrollTop = 0;
+const lastScrollTop = 50;
 bar = document.getElementById("bar");
 subbar = document.getElementById("subnavbar");
 window.addEventListener("scroll", function () {
@@ -16,9 +16,11 @@ window.addEventListener("scroll", function () {
     this.window.pageXOffset || document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
     bar.style.top = "-100px";
+    subbar.style.top = "-500px";
     navbar.style.top = "-295%";
   } else {
     bar.style.top = "0";
+    subbar.style.top = "0";
     navbar.style.top = "100%";
   }
   lastScrollTop = scrollTop;

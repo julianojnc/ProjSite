@@ -172,7 +172,7 @@ header{
 
 /* SubNavBar */
 .subnavbar{
-    position: flex;
+    position: fixed;
     background: var(--main-color);
     color: var(--text-color);
     margin: 70px 0px 0px 0px;    
@@ -202,4 +202,58 @@ header{
 
 .menusubnavbar li:hover{
     background: var(--sec-bg-color);
+}
+
+/* Footer */
+
+footer{
+    
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    font-weight: 500;
+    padding: 30px 5%;
+    background-color: var(--sec-bg-color);
+    width: 100%;
+}
+
+.footercontatos{
+    
+}
+
+.footerrede{
+    
+}
+
+.footerrede ul{
+    
+}
+
+.footermapa{
+    
+}
+
+.footermapa ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.footermapa a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.footermapa i, iconify-icon{
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+.map {
+    width: 650px;
+    height: 300px;
 }
