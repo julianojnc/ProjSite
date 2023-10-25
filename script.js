@@ -7,6 +7,11 @@ menu.onclick = () => {
   navbar.classList.toggle("open");
 };
 
+/* PopUp Map */
+function togglePopup() {
+  document.getElementById("popup-1").classList.toggle("active");
+}
+
 /* Esconder NavBar */
 const lastScrollTop = 50;
 bar = document.getElementById("bar");

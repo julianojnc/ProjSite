@@ -9,10 +9,11 @@
 
 /* Var Colors*/
 :root {
-    --bg-color: #1C5253;
-    --text-color: #fff;
-    --main-color: #F46036;
-    --sec-bg-color: #000000;
+    --bg-color: #fff;
+    --text-color: #000000;
+    --text-color-secon: #fff;
+    --main-color: #62B6CB;
+    --sec-bg-color: #1B4965;
 }
 
 /* Page */
@@ -49,7 +50,7 @@ header {
 }
 
 .logo span {
-    color: var(--text-color);
+    color: var(--text-color-secon);
     font-size: 1.7rem;
     font-weight: 600;
 }
@@ -59,7 +60,7 @@ header {
 }
 
 .navbar a {
-    color: var(--text-color);
+    color: var(--text-color-secon);
     font-size: 1.1rem;
     font-weight: 500;
     padding: 5px 0;
@@ -106,23 +107,17 @@ header {
 
 #menu-icon {
     font-size: 35px;
-    color: var(--text-color);
+    color: var(--text-color-secon);
     cursor: pointer;
     z-index: 10001;
     display: none;
 
 }
 
-/* TEST */
-.teste {
-    padding: 150px 100px 100px;
-}
-
 /* SubNavBar */
 .subnavbar {
     position: fixed;
     background: var(--main-color);
-    color: var(--text-color);
     margin: 70px 0px 0px 0px;
     width: 100%;
     transition: all .50s ease;
@@ -134,7 +129,7 @@ header {
 }
 
 .menusubnavbar a {
-    color: var(--text-color);
+    color: var(--text-color-secon);
 }
 
 .menusubnavbar i {
@@ -153,10 +148,111 @@ header {
     background: var(--sec-bg-color);
 }
 
+/* PopUp Map */
+/* Fundo Cinza */
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index:1;
+    display: none;
+}
+
+/* Corpo do PopUp */
+.popup .content{
+    position: absolute;
+    color: var(--sec-bg-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #fff;
+    width: 75%;
+    height: 70%;
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+/* Layout Corpo PopUp */
+.content h1{
+    display: flex;
+    justify-content: left;
+    font-size: 30px;
+}
+
+.layoutcontent{    
+    display: flex;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.infocontent, .mapcontent{
+    width: 50%;
+}
+
+.infocontent{
+    display: flex;    
+    align-items: start;
+}
+
+.infocontent li{
+    font-size: 25px;
+    padding: 20px;
+}
+
+.mapcontent ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mapcontent iframe{
+    width: 100%;
+    height: 80%;
+}
+
+/* Botão de Fechar */
+.popup .close-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* Ativando o Fundo Cinza */
+.popup.active .overlay{
+    display: block;
+}
+
+/* Ativando o PopUp */
+.popup.popup.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+/* TEST */
+.teste {
+    padding: 150px 100px 100px;
+}
+
 /* Footer */
 footer {
     display: flex;
     justify-content: space-between;
+    color: var(--text-color-secon);
     bottom: 0;
     z-index: 1000;
     font-weight: 500;
@@ -167,8 +263,7 @@ footer {
 }
 
 hr{
-    height: 30px;
-    
+    display: none;
 }
 
 /* Footer Contact*/
@@ -197,14 +292,14 @@ hr{
 
 .footermapa a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-color-secon);
     font-size: 1.1rem;
     font-weight: 500;
 }
 
 .footermapa i,
 iconify-icon {
-    color: var(--main-color);
+    color: var(--text-color-secon);
     font-size: 25px;
 }
 
@@ -277,6 +372,7 @@ iconify-icon {
     }
 
     hr{
+        display: block;
         text-align: center;
         height: 0px;
     }
