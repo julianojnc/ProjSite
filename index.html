@@ -40,37 +40,48 @@
       <li>
         <a href="#"><i class="ri-whatsapp-fill"></i> Whatsapp</a>
       </li>
-      <li onclick="togglePopup()">
+      <li id="openPopUpMap">
         <a href="#"><i class="bx bxs-map"></i>Como Chegar</a>
       </li>
     </ul>
   </section>
 
-  <!-- 
-    Popup Map
-  -->
-
-  <section class="popup" id="popup-1">
-    <section class="overlay"></section>
-    <article class="content">
-      <a class="close-btn" onclick="togglePopup()">&times;</a>
-      <h1>Como Chegar:</h1>
-      <section class="layoutcontent">
-      <article class="infocontent">
-        <ul>
+  <!-- PopUp Map -->
+  <dialog>
+    <a class="close-btn">&times;</a>
+    <h1>Como Chegar:</h1>
+    <section class="layoutdialog">        
+      <article class="infodialog">
+        
+        <ul class="infodialogend">
           <li>Endereço: A. Peixoto, 14</li>
           <li>Município: Vila Velha - ES</li>
           <li>Cep: 29179-254</li>
-        </ul>                    
-    </article>
-    <article class="mapcontent">      
-      <iframe class="map"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1575.1863041658366!2d-40.29601428382165!3d-20.11545259430846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1697802978643!5m2!1spt-BR!2sbr"
-        style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </ul>          
       </article>
+      <section class="mapdialog">
+        <article class="dialogiframe">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1575.1863041658366!2d-40.29601428382165!3d-20.11545259430846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1697802978643!5m2!1spt-BR!2sbr"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </article>
+        <article class="dialogbutton">
+        <ul class="dialogbuttonmap">
+          <li><a
+              href="https://www.waze.com/pt-BR/live-map/directions/br/es/rua-angelim-da-mata?navigate=yes&to=place.EkNSLiBBbmdlbGltIGRhIE1hdGEgLSBDZW50cm8gZGEgU2VycmEsIFNlcnJhIC0gRVMsIDI5MTc5LTI1NCwgQnJhemlsIi4qLAoUChIJh_wCF0X1twARjAstOVur1qQSFAoSCRkgHRRo9bcAEWVzQ0bxvhDf"><iconify-icon
+                icon="mdi:waze"></iconify-icon> Wazer</a></li>
+          <li><a href="https://www.google.com/maps/@-20.115453,-40.296014,17z?hl=pt-BR&entry=ttu"><i
+                class="bx bxs-map"></i> Google</a></li>
+        </ul>
+      </article>
+      </section>
     </section>
-    </article>
-  </section>
+  </dialog>
 
   <section class="teste">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officia

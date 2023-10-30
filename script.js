@@ -7,9 +7,17 @@ menu.onclick = () => {
   navbar.classList.toggle("open");
 };
 
-/* PopUp Map */
-function togglePopup() {
-  document.getElementById("popup-1").classList.toggle("active");
+/* PopUpMap */ 
+const button = document.querySelector("#openPopUpMap")
+const modal = document.querySelector("dialog")
+const buttonClose = document.querySelector("dialog a")
+
+button.onclick = function(){
+    modal.showModal()
+}
+
+buttonClose.onclick = function(){
+    modal.close()
 }
 
 /* Esconder NavBar */
