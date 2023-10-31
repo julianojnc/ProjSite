@@ -161,17 +161,17 @@ dialog::backdrop {
 dialog {
   border: none;
   background: var(--sec-bg-color);
+  background-image: url("./img/Group\ 7.png");
+  background-repeat: no-repeat;
+  background-position:left;
   color: var(--text-color-secon);
   border-radius: 0.5rem;
   box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
   transition: all 0.5s ease;
   width: 70%;
   height: 600px;
-  margin-top: 131px;
-  margin-bottom: 131px;
-  margin-left: 282px;
-  margin-right: 282px;
   padding: 16px;
+  margin: auto;
 }
 
 dialog h1 {
@@ -193,6 +193,12 @@ dialog h1 {
 .infodialog {
   width: 50%;
   height: 100%;
+}
+
+.infodialogend{
+    padding-left: 40px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .infodialogend li {
@@ -360,10 +366,6 @@ iconify-icon {
 
   /* PopUp Map */
   dialog {
-    margin-top: 31px;
-    margin-bottom: 31px;
-    margin-left: 127px;
-    margin-right: 127px;
     width: 80%;
     height: 800px;
   }
@@ -475,13 +477,6 @@ iconify-icon {
   .infodialogend li {
     font-size: 30px;
   }
-
-  dialog {
-    margin-top: 31px;
-    margin-bottom: 31px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
 }
 
 @media (max-width: 580px) {
@@ -510,10 +505,6 @@ iconify-icon {
 
   /* PopUpMap */
   dialog {
-    margin-top: 131px;
-    margin-bottom: 131px;
-    margin-left: 5%;
-    margin-right: 5%;
     width: 90%;
     height: 600px;
   }

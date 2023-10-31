@@ -21,7 +21,7 @@ buttonClose.onclick = function(){
 }
 
 /* Esconder NavBar */
-const lastScrollTop = 50;
+const lastScrollTop = 100;
 bar = document.getElementById("bar");
 subbar = document.getElementById("subnavbar");
 window.addEventListener("scroll", function () {
